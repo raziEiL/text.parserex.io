@@ -1,0 +1,40 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+        // Базовый набор правил eslint
+        "eslint:recommended",
+        // Отключаем правила из базового набора
+        //"plugin:@typescript-eslint/eslint-recommended",
+        // Базовые правила для TypeScript
+       // "plugin:@typescript-eslint/recommended",
+        // Правила TS, требующие инфо о типах
+      //  "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:unicorn/recommended",
+        "plugin:jest/recommended"
+    ],
+    "plugins": [
+        "import",
+        "unicorn",
+        "jest"
+    ],
+    "rules": {
+        "quotes": ["error", "double", { "avoidEscape": true }],
+        "semi": ["error", "always", { "omitLastInOneLineBlock": true }],
+        "indent": ["error", 4, { "SwitchCase": 1 }],
+        "no-empty": ["error", { "allowEmptyCatch": true }],
+        "unicorn/no-fn-reference-in-iterator": "warn",
+        "unicorn/no-abusive-eslint-disable": "warn",       
+        "unicorn/prefer-ternary": "off",
+        "unicorn/no-useless-undefined": "warn",
+        //"unicorn/prevent-abbreviations": "off",
+        //"unicorn/catch-error-name": "off",
+        //"unicorn/explicit-length-check": "off",
+        "unicorn/no-null": "warn"
+    }
+}

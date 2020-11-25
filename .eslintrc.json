@@ -32,9 +32,9 @@
         "unicorn/no-abusive-eslint-disable": "warn",       
         "unicorn/prefer-ternary": "off",
         "unicorn/no-useless-undefined": "warn",
-        //"unicorn/prevent-abbreviations": "off",
+        "unicorn/prevent-abbreviations": "warn",
         //"unicorn/catch-error-name": "off",
-        //"unicorn/explicit-length-check": "off",
+        "unicorn/explicit-length-check": "warn",
         "unicorn/no-null": "warn"
     }
 }

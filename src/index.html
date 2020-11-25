@@ -13,6 +13,7 @@
 <body>
     <header class="container">
         <h1 class="text-center">Text Parser Excel IO</h1>
+        <p class="text-center" id="version">v1.0.1</p>
     </header>
     <main class="container">
         <form class="text-center">
@@ -20,12 +21,17 @@
                 <textarea class="form-control" id="text-val" rows="7"
                     placeholder="Вставьте текст в формате:&#10;ДАТА&#10;ТЕКСТ&#10;&#10;ДАТА&#10;ТЕКСТ&#10;..."></textarea>
             </div>
-            <button type="submit" class="btn btn-primary" id="dwn-btn">Конвертировать в Excel</button>
+            <button type="button" class="btn btn-primary" id="dwn-btn">Экспорт в Excel
+                таблицу<span class="tooltip" id="tooltip-1">Преобразовать текст в формат Excel и скачать xlsx
+                    файлом</span></button>
+            <button type="button" class="btn btn-primary" id="copy-btn">Экспорт в буфер обмена<span class="tooltip"
+                    id="tooltip-2">Преобразовать текст в формат Excel и скопировать в буфер
+                    обмена</span></button>
         </form>
     </main>
     <footer>
         <div class="container text-center">
-            <p>Copyright &copy; <a href="https://github.com/raziEiL">Медведев Денис (&laquo;raziEiL&raquo;)</a></p>
+            <p>Copyright &copy; <a href="https://github.com/raziEiL">Medvedev Denis &laquo;raziEiL&raquo;</a></p>
             <p>2019</p>
         </div>
     </footer>

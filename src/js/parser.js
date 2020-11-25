@@ -18,18 +18,26 @@ const parseToExcel = function (text) {
             return;
 
         const aoa = [[], []];
+        const pushOneRow = (string) => {
+            aoa[0].push(string);
+            aoa[1].push("");
+        };
         let temp;
 
         for (const string of array) {
             temp = string.split("\n", 1);
-            if (temp.length == 1) {
-                aoa[0].push(string.replace(temp[0] + "\n", "")); // text
-                aoa[1].push(temp[0]); // 00:00:00:00
+
+            // текст с таймкодом
+            if (/(?:\d+:){3}\d+/.test(temp)) {
+                if (temp.length === 1) {
+                    aoa[0].push(string.replace(temp[0] + "\n", "")); // text
+                    aoa[1].push(temp[0]); // 00:00:00:00
+                }
+                else
+                    pushOneRow(string);
             }
-            else {
-                aoa[0].push(string);
-                aoa[1].push("");
-            }
+            else
+                pushOneRow(string);
         }
         console.log(aoa);
         return aoa;
